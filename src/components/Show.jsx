@@ -55,7 +55,7 @@ const bgImages = [
   { img: "/6.png", label: "Space Map", game: "Stumble Guys Clone" },
   { img: "/7.png", label: "Driving Controls", game: "Mr. Fox" },
   { img: "/8.png", label: "Space Platforms & Gates", game: "Stumble Guys Clone" },
-  { img: "/9.png", label: "GTA-Style Equippable Vehicle Driving", game: "Mr. Fox" },
+  { img: "/9.png", label: "GTA-Style Vehicle Controls", game: "Mr. Fox" },
   { img: "/10.png", label: "Space Map", game: "Stumble Guys Clone" },
   { img: "/12.png", label: "Hammers Map", game: "Stumble Guys Clone" },
   { img: "/14.png", label: "Hammers Map", game: "Stumble Guys Clone" },
@@ -125,11 +125,11 @@ export default function Show() {
         style={{ backgroundImage: `url('${bgImages[current].img}')` }}
       >
         <div className="w-max h-40 flex justify-end flex-col p-4">
-          <h2 className="text-white font-extrabold text-3xl drop-shadow-[0_4px_50px_rgba(0,0,0,0.8)]">
+          <h2 className="text-white font-extrabold text-lg text-center sm:text-left sm:text-3xl drop-shadow-[0_4px_50px_rgba(0,0,0,0.8)]">
             {bgImages[current].label}
           </h2>
-          <h2 className="text-white font-normal text-xl drop-shadow-[0_4px_50px_rgba(0,0,0,0.8)]">
-            {bgImages[current].game}
+          <h2 className="text-white font-normal text-center sm:text-left sm:text-xl drop-shadow-[0_4px_50px_rgba(0,0,0,0.8)]">
+            {'(' + bgImages[current].game + ')'}
           </h2>
         </div>
         <div className="absolute top-4 right-4 left-1/2 transform -translate-x-1/2 flex gap-2">
