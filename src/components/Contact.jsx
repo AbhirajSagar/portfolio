@@ -7,7 +7,7 @@ export default function Contact() {
 
             <div className="flex flex-col md:flex-row gap-6 justify-center items-start">
 
-                <div className="border-l-4 border-amber-400 p-6 h-48 bg-background-muted-dark max-w-md w-full">
+                <div className="border-l-4 border-amber-400 p-6 h-max bg-background-muted-dark max-w-md w-full">
                     <h3 className="text-lg font-semibold text-muted mb-2">Get in Touch</h3>
                     <p className="text-sm text-muted mb-6">
                         I’m always open to discussing new projects, collaborations, or opportunities. You can reach me via email or connect on socials.
