@@ -1,43 +1,38 @@
-'use client'
+'use client';
+import { motion } from "framer-motion";
+import { FaEnvelope, FaFileDownload } from "react-icons/fa";
 
 export default function Contact() {
-    return (
-        <section className="w-full flex flex-col gap-8">
-            <h2 className="text-xl font-normal text-muted w-full text-center">Contact Me</h2>
-
-            <div className="flex flex-col md:flex-row gap-6 justify-center items-start">
-
-                <div className="border-l-4 border-amber-400 p-6 h-max bg-background-muted-dark max-w-md w-full">
-                    <h3 className="text-lg font-semibold text-muted mb-2">Get in Touch</h3>
-                    <p className="text-sm text-muted mb-6">
-                        I’m always open to discussing new projects, collaborations, or opportunities. You can reach me via email or connect on socials.
-                    </p>
-                    <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=abhirajsagar99@gmail.com&su=Hello&body=Hi%20Abhi,"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-amber-400 text-background-dark font-semibold py-2 px-4 rounded hover:bg-amber-500 transition inline-block"
-                    >
-                        Email Me
-                    </a>
-
-                </div>
-
-                <div className="border-l-4 border-amber-400 h-48 p-6 bg-background-muted-dark max-w-md w-full">
-                    <h3 className="text-lg font-semibold text-muted mb-2">Download My CV</h3>
-                    <p className="text-sm text-muted mb-6">
-                        Get a copy of my resume to see my skills, experience, and projects.
-                    </p>
-                    <a
-                        href="/abhiraj-cv.pdf"
-                        download
-                        className="bg-amber-400 text-background-dark font-semibold py-2 px-4 rounded hover:bg-amber-500 transition"
-                    >
-                        Download CV
-                    </a>
-                </div>
-
-            </div>
-        </section>
-    );
+  return (
+    <div className="w-full max-w-4xl mx-auto text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="bg-neutral-900/50 rounded-3xl p-10 border border-neutral-800 backdrop-blur-sm"
+      >
+        <h2 className="text-amber-500 font-bold tracking-widest uppercase mb-4">Get in Touch</h2>
+        <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">Let us Build Something Amazing</h3>
+        <p className="text-neutral-400 text-lg max-w-xl mx-auto mb-10">
+            Whether you have a game concept, a web project, or just want to say hi, I am always open to new opportunities.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+                href="mailto:abhirajsagar99@gmail.com" 
+                className="px-8 py-4 bg-amber-500 text-neutral-900 rounded-full font-bold text-lg hover:bg-amber-400 transition-colors flex items-center justify-center gap-2"
+            >
+                <FaEnvelope /> Email Me
+            </a>
+            <a 
+                href="/abhiraj_unity_dev.pdf" 
+                download
+                className="px-8 py-4 bg-neutral-800 text-white rounded-full font-bold text-lg hover:bg-neutral-700 transition-colors border border-neutral-700 flex items-center justify-center gap-2"
+            >
+                <FaFileDownload /> Download Resume
+            </a>
+        </div>
+      </motion.div>
+    </div>
+  );
 }

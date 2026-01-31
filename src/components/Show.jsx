@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from "react";
-import { faGithub, faItchIo } from "@fortawesome/free-brands-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faFly, faGithub, faItchIo } from "@fortawesome/free-brands-svg-icons";
+import { faDownload, faFile, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGamepad } from "@fortawesome/free-solid-svg-icons/faGamepad";
 import { motion } from "framer-motion";
@@ -23,26 +23,26 @@ const socials = [
   },
   {
     icon: faDownload,
-    label: "Curriculum Vitae",
+    label: "Download Resume",
     onClick: () => {
       const link = document.createElement("a");
-      link.href = "/abhiraj-cv.pdf";
-      link.download = "abhiraj-cv.pdf";
+      link.href = "/abhiraj_unity_dev.pdf";
+      link.download = "abhiraj_unity_dev.pdf";
       link.click();
     }
   },
   {
-    icon: faGamepad,
-    label: "Town Contracts",
+    icon: faHouse,
+    label: "Town Contracts (Live Game)",
     onClick: () => {
       window.location.href = 'https://play.google.com/store/apps/details?id=com.fitcraft.towncontracts&hl=en_IN'
     }
   },
   {
-    icon: faGamepad,
-    label: "Boba Rush",
+    icon: faFly,
+    label: "Jelly Flyer Rush (Live Game)",
     onClick: () => {
-      window.location.href = 'https://www.amazon.in/-/hi/dp/B0FWF138RH'
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.ff.jellyflyerrushh'
     }
   },
 ];
@@ -76,7 +76,7 @@ const bgImages = [
 
 function SocialButton({ icon, label, onClick }) {
   return (
-    <motion.div onClick={onClick} whileTap={{ scale: 0.95 }} className="text-muted w-full p-2 cursor-pointer outline-1 outline-transparent hover:outline-amber-400 hover:text-amber-400 group bg-background-muted-dark flex-1 rounded flex justify-start items-center">
+    <motion.div onClick={onClick} whileTap={{ scale: 0.95 }} className="text-muted my-2 md:my-0 w-full p-2 cursor-pointer outline-1 outline-transparent hover:outline-amber-400 hover:text-amber-400 group bg-background-muted-dark flex-1 rounded flex justify-start items-center">
       <FontAwesomeIcon icon={icon} className="text-5xl text-muted mr-4 group-hover:text-amber-400 group-hover:drop-shadow-[0_0_10px_orange]" />
       {label}
     </motion.div>
@@ -117,7 +117,7 @@ export default function Show() {
   };
 
   return (
-    <div className="w-full h-100 flex gap-3">
+    <div className="w-full h-200 md:h-100 flex flex-col md:flex-row gap-3">
       <motion.div
         animate={{ opacity: fade ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -146,7 +146,7 @@ export default function Show() {
           ))}
         </div>
       </motion.div>
-      <div className="w-[30%] hidden md:flex h-full rounded-md gap-2 justify-center items-center flex-col">
+      <div className="md:flex h-full w-full md:w-[30%] rounded-md gap-2 justify-center items-center flex-col">
         {socials.map((s, i) => <SocialButton key={i} {...s} />)}
       </div>
     </div>
