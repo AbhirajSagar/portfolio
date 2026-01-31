@@ -4,19 +4,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGamepad, FaGlobe } from "react-icons/fa";
 
 const games = [
-    { name: "Town Contracts", img: "https://play-lh.googleusercontent.com/xnqLMjhXkdGuAoL6b9pTgQjf4KT1Gt8zbZKViUSpkheeMfNfXS5jQHtNaa4UpCb7ZfY=w5120-h2880-rw", link: 'https://play.google.com/store/apps/details?id=com.fitcraft.towncontracts&hl=en_IN', tag: "Mobile" },
-    { name: "Jelly Flyer Rush", img: "https://play-lh.googleusercontent.com/FkvC29E04Cpbf_l25-y-swrWNKpRc_0ylisb1GDEHxFjUguHWOUWczq_uJCW6m4ogVu7vyBapBJXM7Wk28WUtg4=w1052-h592-rw", link: 'https://play.google.com/store/apps/details?id=com.ff.jellyflyerrushh', tag: "Mobile" },
-    { name: "Gun Masters", img: "https://img.itch.zone/aW1nLzE2MzkxMjMyLnBuZw==/315x250%23c/RMT%2F3p.png", link: 'https://abhiraj99.itch.io/gun-master', tag: "PC" },
-    { name: "Block Puzzle", img: "https://img.itch.zone/aW1nLzE2MzkxMTQ2LnBuZw==/315x250%23c/LtX%2Blo.png", link: 'https://abhiraj99.itch.io/block-puzzle', tag: "PC" },
-    { name: "Skyline Showdown", img: "https://img.itch.zone/aW1nLzE0MTgzNDE5LmpwZw==/315x250%23c/9LF1l0.jpg", link: 'https://abhiraj99.itch.io/skyline-showdown', tag: "PC" },
-    { name: "Mr. Fox", img: "https://img.itch.zone/aW1nLzE0NDI4OTExLmpwZw==/315x250%23c/F32%2BLq.jpg", link: 'https://abhiraj99.itch.io/mr-fox', tag: "PC" },
+    { name: "Town Contracts", img: "https://play-lh.googleusercontent.com/xnqLMjhXkdGuAoL6b9pTgQjf4KT1Gt8zbZKViUSpkheeMfNfXS5jQHtNaa4UpCb7ZfY=w5120-h2880-rw", link: 'https://play.google.com/store/apps/details?id=com.fitcraft.towncontracts&hl=en_IN', platform: "Mobile", tech: ["Unity", "C#", "Unity Ads", "Unity IAP"] },
+    { name: "Jelly Flyer Rush", img: "https://play-lh.googleusercontent.com/FkvC29E04Cpbf_l25-y-swrWNKpRc_0ylisb1GDEHxFjUguHWOUWczq_uJCW6m4ogVu7vyBapBJXM7Wk28WUtg4=w1052-h592-rw", link: 'https://play.google.com/store/apps/details?id=com.ff.jellyflyerrushh', platform: "Mobile", tech: ["Unity", "C#"] },
+    { name: "Gun Masters", img: "https://img.itch.zone/aW1nLzE2MzkxMjMyLnBuZw==/315x250%23c/RMT%2F3p.png", link: 'https://abhiraj99.itch.io/gun-master', platform: "Web", tech: ["Unity", "C#", "WebGL"] },
+    { name: "Block Puzzle", img: "https://img.itch.zone/aW1nLzE2MzkxMTQ2LnBuZw==/315x250%23c/LtX%2Blo.png", link: 'https://abhiraj99.itch.io/block-puzzle', platform: "Web", tech: ["Unity", "C#", "WebGL"] },
+    { name: "Skyline Showdown", img: "https://img.itch.zone/aW1nLzE0MTgzNDE5LmpwZw==/315x250%23c/9LF1l0.jpg", link: 'https://abhiraj99.itch.io/skyline-showdown', platform: "Mobile", tech: ["Unity", "C#"] },
+    { name: "Mr. Fox", img: "https://img.itch.zone/aW1nLzE0NDI4OTExLmpwZw==/315x250%23c/F32%2BLq.jpg", link: 'https://abhiraj99.itch.io/mr-fox', platform: "Mobile", tech: ["Unity", "C#"] },
 ];
 
 const webProjects = [
-    { name: "Code Collab", img: "/collaboration.png", desc: "Real-time collaborative coding platform.", link: 'https://collab-code-app.vercel.app/' },
-    { name: "Notes To Mindmap", img: "/mindmap.png", desc: "AI-powered notes to mind map converter.", link: 'https://notes-to-mindmap.vercel.app/' },
-    { name: "Quyz", img: "/quiz.png", desc: "Online quiz creation and sharing platform.", link: 'https://quyz.vercel.app/' },
-    { name: "Chatvrooms", img: "/chat.png", desc: "Anonymous serverless chat platform.", link: 'https://chatvrooms.vercel.app/' }
+    { name: "Code Collab", img: "/collaboration.png", desc: "Real-time collaborative coding platform.", link: 'https://collab-code-app.vercel.app/', tech: ["Next.js", "PeerJS", "TailwindCSS"] },
+    { name: "Notes To Mindmap", img: "/mindmap.png", desc: "AI-powered notes to mind map converter.", link: 'https://notes-to-mindmap.vercel.app/', tech: ["Next.js", "Google Cloud OAuth", "GroqCloud AI"] },
+    { name: "Quyz", img: "/quiz.png", desc: "Online quiz creation and sharing platform.", link: 'https://quyz.vercel.app/', tech: ["React", "Vite", "Supabase", "TailwindCSS"] },
+    { name: "Chatvrooms", img: "/chat.png", desc: "Anonymous serverless chat platform.", link: 'https://chatvrooms.vercel.app/', tech: ["Next.js", "PeerJS"] }
 ];
 
 export default function Projects() {
@@ -37,7 +37,7 @@ export default function Projects() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
             {activeTab === "games" 
                 ? games.map((p, i) => <ProjectCard key={p.name} project={p} index={i} type="game" />)
                 : webProjects.map((p, i) => <ProjectCard key={p.name} project={p} index={i} type="web" />)
@@ -81,13 +81,25 @@ function ProjectCard({ project, index, type }) {
             </div>
             
             <div className="p-5 relative z-10 bg-neutral-900">
-                <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">{project.name}</h3>
-                    {project.tag && <span className="text-[10px] uppercase bg-neutral-800 px-2 py-1 rounded text-neutral-400">{project.tag}</span>}
+                <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors flex-1">{project.name}</h3>
+                    <span className="text-[10px] uppercase bg-neutral-800 px-2 py-1 rounded text-neutral-400 ml-2 whitespace-nowrap">
+                        {type === 'game' ? project.platform : 'Web'}
+                    </span>
                 </div>
-                {type === 'web' && <p className="text-sm text-neutral-400">{project.desc}</p>}
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-3">
+                    {project.tech && project.tech.map((t, idx) => (
+                        <span key={idx} className="text-xs bg-neutral-800 text-neutral-400 px-2 py-1 rounded">
+                            {t}
+                        </span>
+                    ))}
+                </div>
+
+                {type === 'web' && <p className="text-sm text-neutral-400 mb-2">{project.desc}</p>}
                 
-                <div className="mt-4 flex items-center text-sm text-amber-500 font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                <div className="flex items-center text-sm text-amber-500 font-medium opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                     View Project &rarr;
                 </div>
             </div>

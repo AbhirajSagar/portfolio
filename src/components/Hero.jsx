@@ -39,7 +39,7 @@ export default function Hero() {
           />
         ))}
         {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-neutral-950/40 to-neutral-950 z-10" />
+        <div className="absolute inset-0 bg-linear-to-b from-neutral-950/80 via-neutral-950/40 to-neutral-950 z-10" />
       </div>
 
       {/* Content */}
@@ -51,10 +51,10 @@ export default function Hero() {
         >
           <h2 className="text-xl md:text-2xl font-medium text-amber-400 mb-2">Hello, I am</h2>
           <h1 className="text-5xl md:text-8xl font-black text-white tracking-tight mb-4 drop-shadow-2xl">
-            ABHIRAJ SAGAR
+            Abhiraj Sagar
           </h1>
           <p className="text-lg md:text-2xl text-neutral-300 font-light max-w-2xl mx-auto">
-            Unity Game Developer & <span className="text-amber-400 font-normal">Full-Stack Engineer</span>
+            Unity Game & <span className="text-amber-400 font-normal">Full-Stack Developer</span>
           </p>
         </motion.div>
 
