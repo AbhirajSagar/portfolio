@@ -17,7 +17,6 @@ const parkinsans = Parkinsans({
 export const metadata = 
 {
   title: "Abhiraj Sagar",
-  description: "Unity Game Developer | Full Stack Web Developer",
 };
 
 export default function RootLayout({children} : { children: React.ReactNode }) 
@@ -25,7 +24,6 @@ export default function RootLayout({children} : { children: React.ReactNode })
   return (
     <html lang="en">
       <body className={`${outfit.variable} ${parkinsans.variable} bg-background-alt dark:bg-background-dark antialiased`}>
-        <Navbar/>
         {children}
       </body>
     </html>
