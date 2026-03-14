@@ -78,7 +78,7 @@ export default function Hero() {
             <SocialBtn href="https://github.com/AbhirajSagar" icon={faGithub} label="GitHub" />
             <SocialBtn href="https://abhiraj99.itch.io/" icon={faItchIo} label="Itch.io" />
             <SocialBtn 
-                href="/abhiraj_unity_dev.pdf" 
+                href="/abhiraj_web_dev.pdf" 
                 icon={faDownload} 
                 label="Resume" 
                 primary 

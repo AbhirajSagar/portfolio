@@ -26,7 +26,7 @@ const socials = [
     label: "Download Resume",
     onClick: () => {
       const link = document.createElement("a");
-      link.href = "/abhiraj_unity_dev.pdf";
+      link.href = "/abhiraj_web_dev.pdf";
       link.download = "abhiraj_unity_dev.pdf";
       link.click();
     }

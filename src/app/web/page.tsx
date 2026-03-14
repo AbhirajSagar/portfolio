@@ -240,9 +240,9 @@ function Hero() {
             className="px-6 py-3 rounded-full font-semibold flex items-center gap-2 bg-neutral-800 text-white hover:bg-neutral-700 border border-neutral-700 transition-all duration-300 hover:-translate-y-0.5">
             <FontAwesomeIcon icon={faGithub} /> GitHub
           </a>
-          <a href="mailto:abhirajsagar99@gmail.com"
+          <a href="/abhiraj_web_dev.pdf" download
             className="px-6 py-3 rounded-full font-semibold flex items-center gap-2 bg-sky-500 text-white hover:bg-sky-400 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(14,165,233,0.35)]">
-            <FontAwesomeIcon icon={faEnvelope} /> Hire Me
+            <FontAwesomeIcon icon={faDownload} /> Download Resume
           </a>
         </motion.div>
       </div>
@@ -430,7 +430,7 @@ function Contact() {
               className="px-8 py-4 bg-sky-500 text-white rounded-full font-bold text-base hover:bg-sky-400 transition-colors flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)]">
               <FontAwesomeIcon icon={faEnvelope} /> Email Me
             </a>
-            <a href="/abhiraj_unity_dev.pdf" download
+            <a href="/abhiraj_web_dev.pdf" download
               className="px-8 py-4 bg-neutral-800 text-white rounded-full font-bold text-base hover:bg-neutral-700 transition-colors border border-neutral-700 flex items-center justify-center gap-2">
               <FontAwesomeIcon icon={faDownload} /> Download Resume
             </a>
