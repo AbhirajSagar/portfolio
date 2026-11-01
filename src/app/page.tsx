@@ -7,6 +7,7 @@ import { faGithub, faItchIo, faGooglePlay } from "@fortawesome/free-brands-svg-i
 import { faDownload, faArrowUpRightFromSquare, faXmark, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { FaBars, FaTimes, FaUnity } from "react-icons/fa";
+import VisitorNotifier from "@/components/VisitorNotifier";
 
 // ─── TYPES ────────────────────────────────────────────────────────────────────
 
@@ -776,6 +777,7 @@ function SocialLink({ href, icon, label }: { href: string; icon: IconDefinition;
 export default function GameDevPortfolio() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-200 selection:bg-amber-500/30">
+      <VisitorNotifier />
       <Navbar />
       <div id="home"><Hero /></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24 pb-20">
