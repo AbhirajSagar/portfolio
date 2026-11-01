@@ -2,21 +2,21 @@
 
 :root 
 {
-  --primary: #5876de;             /* main brand color / buttons */
-  --accent: #ffb256;              /* highlights, call-to-action */
-  --muted: #999999;               /* secondary text, placeholders */
-  --background-muted-dark: #232323;        /* main text */
-  --text-dark: #1f1f1f;           /* headings or dark text */
-  --background-dark: #151515;     /* dark backgrounds */
-  --background-light: #ffffff;    /* light backgrounds */
-  --background-alt: #ebebeb;      /* cards, panels */
-  --highlight-light: #88a3ff;     /* hover, focus, info */
-  --black: #000000;               /* black for borders, text */
+  --primary: #5876de;
+  --accent: #f59e0b;
+  --muted: #999999;
+  --background-muted-dark: #232323;
+  --text-dark: #1f1f1f;
+  --background-dark: #0c0d10;
+  --background-light: #ffffff;
+  --background-alt: #16181f;
+  --highlight-light: #88a3ff;
+  --black: #000000;
 }
 
 body
 {
-  font-family: var(--font-outfit);
+  font-family: var(--font-parkinsans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 @theme
@@ -24,12 +24,12 @@ body
   --color-primary: var(--primary);             
   --color-accent: var(--accent);              
   --color-muted: var(--muted);               
-  --color-background-muted-dark:var(--background-muted-dark) ;      
-  --color-text-dark:var(--text-dark) ;           
-  --color-background-dark:var(--background-dark) ;     
-  --color-background-light:var(--background-light) ;    
-  --color-background-alt:var(--background-alt) ;      
-  --color-highlight-light:var(--highlight-light) ;    
+  --color-background-muted-dark: var(--background-muted-dark);      
+  --color-text-dark: var(--text-dark);           
+  --color-background-dark: var(--background-dark);     
+  --color-background-light: var(--background-light);    
+  --color-background-alt: var(--background-alt);      
+  --color-highlight-light: var(--highlight-light);    
   --color-black: var(--black);      
   --breakpoint-xxs: 25rem;         
   --breakpoint-xs: 35rem;         
